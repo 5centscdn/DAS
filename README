@@ -1,0 +1,45 @@
+
+Compiling das
+-------------------
+
+./autogen.sh
+./configure --prefix=/usr --sysconfdir=/etc
+make
+make install
+
+Building RPM/DEB
+-------------------
+
+./configure --prefix=/usr --sysconfdir=/etc --enable-rpm
+make rpm
+
+
+apt-get install dpkg-dev debhelper
+./configure --prefix=/usr --sysconfdir=/etc --enable-deb
+make deb
+
+Running das
+-------------------
+
+/etc/init.d/das start
+/etc/init.d/das stop
+
+
+Configuring das
+-------------------
+
+/etc/das.cfg JSON format configuration file
+
+listen - port number or ip:port with port and network interface to listen on
+clients_per_thread - number of clients per thread, can override in "url" configuration. Should be
+                    larger for low quality streams, smaller for high quality streams
+
+urls - list of URLs processed in order as they appear in file.
+    url - regex for matching requested URL.
+    pageUrl - see rtmpgw parameters
+    swfUrl - see rtmpgw parameters
+    app - see rtmpgw parameters
+    playpath - see rtmpgw parameters
+    flashver - see rtmpgw parameters
+    rtmp - see rtmpgw parameters
+

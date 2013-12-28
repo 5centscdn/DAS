@@ -1,0 +1,11 @@
+Source: das
+Section: non-free/net
+Priority: extra
+Maintainer: Amru Rahiman Komalath <rahiman@5centscdn.com>
+Standards-Version: 3.9.2
+Homepage: http://5centscdn.net/5centscdn/das/
+
+Package: das
+Architecture: any
+Depends: ${misc:Depends}
+Description: DaS is a RTMP to HTTP proxy module. It acts as an reserve proxy. DaS simply converts RTMP streams into HTTP streams.

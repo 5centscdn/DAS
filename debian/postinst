@@ -1,0 +1,7 @@
+case "$1" in
+    configure)
+        dasd -V
+    ;;
+esac
+
+exit 0
