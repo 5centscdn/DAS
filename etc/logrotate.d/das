@@ -1,0 +1,8 @@
+/var/log/das/das.log /var/log/das/access.log {
+  daily
+  rotate 7
+  missingok
+  compress
+  delaycompress
+  missingok
+}
